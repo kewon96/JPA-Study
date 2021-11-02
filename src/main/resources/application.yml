@@ -1,0 +1,21 @@
+## http://mageddo.com/tools/yaml-converter
+
+server:
+  port: 3031
+
+## database 접속 설정
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5433/jpa_study
+    username: admin
+    password: admin
+  jpa:
+    properties:
+      hibernate:
+        jdbc:
+          lob:
+            non_contextual_creation: 'true'
+    hibernate:
+      ddl-auto: create
+
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
